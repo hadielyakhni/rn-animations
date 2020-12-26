@@ -17,7 +17,7 @@ export default function DonutChart({
     strokeWidth = 12,
     duration = 750,
     color = "tomato",
-    delay = 250,
+    delay = 500,
     textColor,
     max = 100
 }) {
@@ -29,7 +29,7 @@ export default function DonutChart({
 
     const animation = (toValue) => {
         return Animated.timing(animated, {
-            delay: 1000,
+            delay,
             toValue,
             duration,
             useNativeDriver: true,
