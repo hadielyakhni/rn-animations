@@ -18,7 +18,7 @@ const MainList = () => {
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         backgroundColor: '#fff',
-                        elevation: 5,
+                        elevation: 2,
                         padding: 10,
                         borderRadius: 10
                     }}
