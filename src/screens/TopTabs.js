@@ -1,4 +1,3 @@
-import { MaterialIcons } from '@expo/vector-icons';
 import React, { createRef, useRef, useEffect, useState, forwardRef } from 'react';
 import {
     Text,

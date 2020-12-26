@@ -1,4 +1,3 @@
-import { MaterialIcons } from '@expo/vector-icons'
 import dayjs from 'dayjs'
 import React, { useRef, useEffect } from 'react'
 import { View, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native'

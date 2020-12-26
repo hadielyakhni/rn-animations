@@ -1,4 +1,3 @@
-import { MaterialIcons } from '@expo/vector-icons';
 import React, { useRef, useEffect } from 'react';
 import {
     Easing,
@@ -6,7 +5,6 @@ import {
     Animated,
     View,
     StyleSheet,
-    TouchableOpacity,
 } from 'react-native';
 import Svg, { G, Circle } from 'react-native-svg';
 import BackButton from '../components/BackButton';

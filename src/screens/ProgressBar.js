@@ -1,4 +1,3 @@
-import { MaterialIcons } from '@expo/vector-icons'
 import React, { useRef, useState, useEffect } from 'react'
 import { View, Text, Animated, TouchableOpacity } from 'react-native'
 import BackButton from '../components/BackButton'

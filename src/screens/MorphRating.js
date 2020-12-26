@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text, View, Dimensions, Animated, StatusBar } from 'react-native';
 import { interpolate } from 'flubber';
 import Svg, { Path, G } from 'react-native-svg'
-import { AntDesign, MaterialIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import Chroma from 'chroma-js'
 import BackButton from '../components/BackButton';
