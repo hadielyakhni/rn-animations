@@ -95,7 +95,7 @@ const Tabs = ({ data, scrollX, onItemPress }) => {
     )
 }
 
-export default ({ navigation }) => {
+export default () => {
     const scrollX = useRef(new Animated.Value(0)).current
     const flatListRef = useRef()
     const onItemPress = (itemIndex) => {

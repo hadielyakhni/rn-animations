@@ -7,7 +7,7 @@ const { width } = Dimensions.get('screen')
 const SIZE = width * .9
 const TICK_INTERVAL = 1000
 
-export default function AnalogClock({ navigation }) {
+export default function AnalogClock() {
 
     const index = useRef(new Animated.Value(0)).current
     const tick = useRef(new Animated.Value(0)).current

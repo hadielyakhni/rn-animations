@@ -12,7 +12,6 @@ import BackButton from '../components/BackButton';
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export default function DonutChart({
-    navigation,
     percentage = 75,
     radius = 60,
     strokeWidth = 12,

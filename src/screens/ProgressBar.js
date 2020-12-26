@@ -58,7 +58,7 @@ const Progress = ({ step, steps, height }) => {
     )
 }
 
-export default ({ navigation }) => {
+export default () => {
     const STEPS = useRef(10).current
     const [step, setStep] = useState(0)
     const increaseProgress = () => setStep((step + 1) % (STEPS + 1))
