@@ -1,3 +1,4 @@
+import { MaterialIcons } from '@expo/vector-icons';
 import React, { createRef, useRef, useEffect, useState, forwardRef } from 'react';
 import {
     Text,
@@ -9,6 +10,7 @@ import {
     Image,
     TouchableOpacity,
 } from 'react-native';
+import BackButton from '../components/BackButton';
 
 const images = {
     man:
@@ -94,7 +96,7 @@ const Tabs = ({ data, scrollX, onItemPress }) => {
     )
 }
 
-export default () => {
+export default ({ navigation }) => {
     const scrollX = useRef(new Animated.Value(0)).current
     const flatListRef = useRef()
     const onItemPress = (itemIndex) => {
@@ -104,6 +106,7 @@ export default () => {
     }
     return (
         <View style={styles.container}>
+            <BackButton color="#fff" />
             <Animated.FlatList
                 ref={flatListRef}
                 data={data}

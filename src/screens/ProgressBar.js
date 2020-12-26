@@ -1,6 +1,7 @@
 import { MaterialIcons } from '@expo/vector-icons'
 import React, { useRef, useState, useEffect } from 'react'
 import { View, Text, Animated, TouchableOpacity } from 'react-native'
+import BackButton from '../components/BackButton'
 
 const Progress = ({ step, steps, height }) => {
 
@@ -69,11 +70,7 @@ export default ({ navigation }) => {
             justifyContent: 'center',
             padding: 20
         }}>
-            <TouchableOpacity
-                style={{ position: 'absolute', top: 44, left: 16 }}
-                onPress={navigation.goBack}>
-                <MaterialIcons name={"arrow-back"} size={30} color="#333" />
-            </TouchableOpacity>
+            <BackButton />
             <Progress step={step} steps={STEPS} height={20} />
             <TouchableOpacity
                 onPress={increaseProgress}

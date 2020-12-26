@@ -5,6 +5,7 @@ import Svg, { Path, G } from 'react-native-svg'
 import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import Chroma from 'chroma-js'
+import BackButton from '../components/BackButton';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -73,9 +74,7 @@ export default class MorphRating extends React.Component {
             <LinearGradient
                 colors={[TOP_COLORS_SPECTRUM[this.state.colorIndex], BOTTOM_COLORS_SPECTRUM[this.state.colorIndex]]} style={styles.gradient}>
                 <StatusBar translucent backgroundColor='transparent' />
-                <TouchableOpacity style={styles.backArrow} onPress={this.props.navigation.goBack}>
-                    <MaterialIcons name={"arrow-back"} size={30} color="#333" />
-                </TouchableOpacity>
+                <BackButton />
                 <View style={styles.headings}>
                     <Text style={styles.heading}>Please rate your feedback</Text>
                     <Text style={styles.body}>Do let us know your thoughts.</Text>

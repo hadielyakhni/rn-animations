@@ -1,25 +1,26 @@
+import { MaterialIcons } from '@expo/vector-icons';
 import React, { useRef, useEffect } from 'react';
 import {
     Easing,
     TextInput,
     Animated,
-    Text,
     View,
     StyleSheet,
+    TouchableOpacity,
 } from 'react-native';
-import Constants from 'expo-constants';
-import Svg, { G, Circle, Rect } from 'react-native-svg';
+import Svg, { G, Circle } from 'react-native-svg';
+import BackButton from '../components/BackButton';
 
-const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
-export default function Donut({
+export default function DonutChart({
+    navigation,
     percentage = 75,
     radius = 60,
     strokeWidth = 12,
-    duration = 1000,
+    duration = 750,
     color = "tomato",
-    delay = 0,
+    delay = 250,
     textColor,
     max = 100
 }) {
@@ -65,6 +66,7 @@ export default function Donut({
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <BackButton />
             <Svg
                 height={radius * 2}
                 width={radius * 2}

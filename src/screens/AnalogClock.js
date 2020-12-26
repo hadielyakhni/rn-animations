@@ -1,12 +1,14 @@
+import { MaterialIcons } from '@expo/vector-icons'
 import dayjs from 'dayjs'
 import React, { useRef, useEffect } from 'react'
-import { View, StyleSheet, Dimensions, Animated } from 'react-native'
+import { View, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native'
+import BackButton from '../components/BackButton'
 
 const { width } = Dimensions.get('screen')
 const SIZE = width * .9
 const TICK_INTERVAL = 1000
 
-export default function AnalogClock() {
+export default function AnalogClock({ navigation }) {
 
     const index = useRef(new Animated.Value(0)).current
     const tick = useRef(new Animated.Value(0)).current
@@ -105,6 +107,7 @@ export default function AnalogClock() {
 
     return (
         <View style={[styles.container]}>
+            <BackButton />
             <Animated.View style={[styles.bigQuadran, { transform: [{ scale: bigQuadranScale }] }]} />
             <Animated.View style={[styles.mediumQuadran, { transform: [{ scale: mediumQuadranScale }] }]} />
             <Animated.View style={[styles.mover, transformHours]}>
