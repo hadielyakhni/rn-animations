@@ -55,7 +55,7 @@ export default () => {
           const scale = scrollY.interpolate({ inputRange: scaleInputRange, outputRange: [1, 1, 1, 0] })
           const opacityInputRange = [-1, 0, ITEM_SIZE * index, ITEM_SIZE * (index + 0.6)]
           const opacity = scrollY.interpolate({ inputRange: opacityInputRange, outputRange: [1, 1, 1, 0] })
-          const rotate = scrollY.interpolate({ inputRange: opacityInputRange, outputRange: [0, 0, 0, "5deg"] })
+          const rotate = scrollY.interpolate({ inputRange: opacityInputRange, outputRange: ["0deg", "0deg", "0deg", "5deg"] })
           return (
             <Animated.View style={{
               flexDirection: 'row',
