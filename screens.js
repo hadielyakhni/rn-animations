@@ -6,6 +6,8 @@ import DonutChart from './src/screens/DonutChart'
 import BGBlurredCarousel from './src/screens/BGBlurredCarousel'
 import YoloOnborading from './src/screens/YoloOnborading'
 import ListScrolling from './src/screens/ListScrolling'
+import ReanimatedDemo from './src/screens/ReanimatedDemo'
+import GestureHandlerDemo from './src/screens/GestureHandlerDemo'
 
 export default SCREENS = [
     { name: 'morph-rating', component: MorphRating },
@@ -15,5 +17,7 @@ export default SCREENS = [
     { name: 'donut-chart', component: DonutChart },
     { name: 'bg-blurred-carousel', component: BGBlurredCarousel },
     { name: 'yolo-onboarding', component: YoloOnborading },
-    { name: 'list-scrolling', component: ListScrolling }
+    { name: 'list-scrolling', component: ListScrolling },
+    { name: 'reanimated-demo', component: ReanimatedDemo },
+    { name: 'gesture-handler-demo', component: GestureHandlerDemo },
 ]
