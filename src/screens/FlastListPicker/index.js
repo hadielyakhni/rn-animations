@@ -157,7 +157,7 @@ export default function App() {
 
     useDerivedValue(() => {
         scrollTo(darkRef, 0, scrollY.value, false);
-    });
+    }, []);
 
     const scrollHandler = useAnimatedScrollHandler(
         {

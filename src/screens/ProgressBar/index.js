@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import Reanimated, { useSharedValue, useAnimatedStyle, useDerivedValue } from 'react-native-reanimated'
+import Reanimated, { useSharedValue, useAnimatedStyle, interpolateColor, withTiming, useDerivedValue } from 'react-native-reanimated'
 import BackButton from '../../components/BackButton'
 
 const Progress = ({ step, steps, height }) => {
@@ -9,15 +9,28 @@ const Progress = ({ step, steps, height }) => {
 
     const progressBarWidth = useSharedValue(0)
 
+    const reactiveWidth = useDerivedValue(() => {
+        return withTiming(progressBarWidth.value, { duration: 300 })
+    }, [])
+
     useEffect(() => {
         progressBarWidth.value = -width + (width * step) / steps
     }, [step, width])
 
-    useAnimatedStyle(() => ({
-        transform: [{
-            translateX: withTiming(progressBarWidth.value, { duration: 200 })
-        }]
-    }))
+
+
+    const animatedStyle = useAnimatedStyle(() => {
+        return {
+            backgroundColor: interpolateColor(
+                reactiveWidth.value,
+                [-width, -width / 2, 0],
+                ['#f18888', '#fff000', '#50d2c2'],
+            ),
+            transform: [{
+                translateX: reactiveWidth.value
+            }]
+        }
+    })
 
     return (
         <>
@@ -40,7 +53,7 @@ const Progress = ({ step, steps, height }) => {
                     overflow: 'hidden'
                 }}>
                 <Reanimated.View
-                    style={{
+                    style={[{
                         height,
                         width: '100%',
                         backgroundColor: 'rgba(0,0,0,0.5)',
@@ -48,8 +61,7 @@ const Progress = ({ step, steps, height }) => {
                         position: 'absolute',
                         left: 0,
                         top: 0,
-                        transform
-                    }}
+                    }, animatedStyle]}
                 />
             </View>
         </>
@@ -57,7 +69,7 @@ const Progress = ({ step, steps, height }) => {
 }
 
 export default () => {
-    const STEPS = useRef(10).current
+    const STEPS = useRef(1).current
     const [step, setStep] = useState(0)
     const increaseProgress = () => setStep((step + 1) % (STEPS + 1))
     return (
