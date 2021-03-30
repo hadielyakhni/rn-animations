@@ -8,7 +8,8 @@ import YoloOnborading from './src/screens/YoloOnborading'
 import ListScrolling from './src/screens/ListScrolling'
 import ReanimatedDemo from './src/screens/ReanimatedDemo'
 import GestureHandlerDemo from './src/screens/GestureHandlerDemo'
-import FlastListPicker from './src/screens/FlastListPicker'
+import AnimatedFlastListPicker from './src/screens/FlastListPicker/vanilla_animated'
+import ReanimatedFlastListPicker from './src/screens/FlastListPicker'
 
 export default SCREENS = [
     { name: 'morph-rating', component: MorphRating },
@@ -21,5 +22,6 @@ export default SCREENS = [
     { name: 'list-scrolling', component: ListScrolling },
     { name: 'reanimated-demo', component: ReanimatedDemo },
     { name: 'gesture-handler-demo', component: GestureHandlerDemo },
-    { name: 'flatlist-picker', component: FlastListPicker },
+    { name: 'flatlist-picker-animated', component: AnimatedFlastListPicker },
+    { name: 'flatlist-picker-reanimated', component: ReanimatedFlastListPicker },
 ]
