@@ -11,6 +11,7 @@ import ReanimatedDemo from './src/screens/ReanimatedDemo'
 import GestureHandlerDemo from './src/screens/GestureHandlerDemo'
 import AnimatedFlastListPicker from './src/screens/FlastListPicker/vanilla_animated'
 import ReanimatedFlastListPicker from './src/screens/FlastListPicker'
+import FluidCarousel from "./src/screens/FluidCarousel"
 
 export default SCREENS = [
     { name: 'morph-rating', component: MorphRating },
@@ -26,4 +27,5 @@ export default SCREENS = [
     { name: 'gesture-handler-demo', component: GestureHandlerDemo },
     { name: 'flatlist-picker-animated', component: AnimatedFlastListPicker },
     { name: 'flatlist-picker-reanimated', component: ReanimatedFlastListPicker },
+    { name: 'fluid-carousel', component: FluidCarousel },
 ]

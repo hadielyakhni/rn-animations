@@ -14,7 +14,7 @@ export default function App() {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="animations" component={MainList} options={{ headerShown: true }} />
                 {SCREENS.map(({ name, component }) =>
-                    <Stack.Screen key={name} name={name} component={component} />)
+                    <Stack.Screen key={name} {...{name, component}} />)
                 }
             </Stack.Navigator>
         </NavigationContainer>

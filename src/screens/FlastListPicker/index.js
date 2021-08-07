@@ -4,11 +4,10 @@ import {
     Alert,
     StatusBar,
     Dimensions,
-    // Animated,
     FlatList,
     Text,
     View,
-    StyleSheet,
+    StyleSheet
 } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import Reanimated, {
@@ -23,10 +22,12 @@ import BackButton from '../../components/BackButton';
 
 const ICON_SIZE = 42;
 const ITEM_HEIGHT = ICON_SIZE * 2;
+
 const colors = {
     yellow: '#FFE8A3',
     dark: '#2D2D2D',
 };
+
 const { width, height } = Dimensions.get('window');
 
 const AnimatedFlatList = Reanimated.createAnimatedComponent(FlatList)
