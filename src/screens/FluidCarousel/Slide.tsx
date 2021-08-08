@@ -22,10 +22,12 @@ const C = 0.551915024494;
 const CENTER = { x: 1, y: 1 };
 
 const vec = (x: number, y: number) => cartesian2Canvas({ x, y }, CENTER);
+
 const addX = (v: Vector, x: number) => {
     "worklet";
     return { x: v.x + x, y: v.y };
 };
+
 const P00 = vec(0, 1);
 const P01 = vec(C, 1);
 const P02 = vec(1, C);
